@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SurveyShield SDK Test</title>
+</head>
+
+<body>
+
+    <h2>SurveyShield SDK Test</h2>
+
+    <p>
+        Open the browser console (F12 → Console) to see the generated payload.
+    </p>
+
+    <!-- Load SurveyShield SDK -->
+    <script src="/static/surveyshield.js"></script>
+
+    <script>
+
+        SurveyShield.start({
+
+            projectId: "PROJECT_B",
+
+            uuid: "UUID001",
+
+            vendor: "Dynata",
+
+            country: "India"
+
+        });
+
+    </script>
+
+</body>
+
+</html>

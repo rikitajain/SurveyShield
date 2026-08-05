@@ -1,0 +1,15 @@
+python -m uvicorn main:app --reload
+http://127.0.0.1:8000/
+http://127.0.0.1:8000/docs#/default/check_respondent_api_respondent_check_post
+http://127.0.0.1:8000/openapi.json
+http://127.0.0.1:8000/api/audit
+http://127.0.0.1:8000/api/dashboard
+http://127.0.0.1:8000/docs#/default/check_respondent_api_respondent_check_post
+
+Currently js, html everything can be seen in console, can we hide them.
+Please help me to create one document, for scripting/programming we have done, for future reference.
+We can draft email to PC once we will have v1 ready for PC's review.
+Why Brouser is "Mozilla" always
+"http://127.0.0.1:8000/api/respondent/check" please explain
+How device ID is generated : 
+"TW96aWxsYS81LjAgKFdpbmRvd3MgTlQgMTAuMDsgV2luNjQ7IHg2NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzE1MC4wLjAuMCBTYWZhcmkvNTM3LjM2fFdpbjMyfGVuLVVTfDE1MzZ8ODY0fDI0fEFzaWEvQ2FsY3V0dGE="
