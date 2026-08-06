@@ -57,11 +57,17 @@ def check_respondent(
         create_respondent(
             db,
             respondent.project_id,
+            respondent.uuid,
+            respondent.vendor,
             respondent.email,
             client_ip,
             respondent.country,
             respondent.browser,
             respondent.device_id,
+            respondent.latitude,
+            respondent.longitude,
+            respondent.location_permission,
+            respondent.location_accuracy,
         )
 
     engine_results_json = json.dumps(engine_results)

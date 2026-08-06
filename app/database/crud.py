@@ -65,20 +65,32 @@ def count_device_usage(
 def create_respondent(
     db: Session,
     project_id,
+    uuid,
+    vendor,
     email,
     ip,
     country,
     browser,
     device_id,
+    latitude,
+    longitude,
+    location_permission,
+    location_accuracy,
 ):
 
     respondent = RespondentDB(
         project_id=project_id,
+        uuid=uuid,
+        vendor=vendor,
         email=email,
         ip=ip,
         country=country,
         browser=browser,
         device_id=device_id,
+        latitude=latitude,
+        longitude=longitude,
+        location_permission=location_permission,
+        location_accuracy=location_accuracy,
     )
 
     db.add(respondent)

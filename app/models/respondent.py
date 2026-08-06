@@ -24,3 +24,7 @@ class Respondent(BaseModel):
     latitude: Optional[float] = None
 
     longitude: Optional[float] = None
+    
+    location_permission: Optional[str] = None
+
+    location_accuracy: Optional[float] = None

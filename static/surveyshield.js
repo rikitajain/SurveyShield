@@ -6,6 +6,9 @@ const SurveyShield = {
 
         let latitude = null;
         let longitude = null;
+		
+		let location_permission = "Unavailable";
+		let location_accuracy = null;
 
         if (navigator.geolocation) {
 
@@ -23,16 +26,41 @@ const SurveyShield = {
 
                 });
 
-                latitude = position.coords.latitude;
-                longitude = position.coords.longitude;
+				location_permission = "Granted";
+		
+				latitude = position.coords.latitude;
+				longitude = position.coords.longitude;
+				location_accuracy = position.coords.accuracy;
 
             } catch (e) {
 
-                console.log("Location permission denied.");
+				if (e.code === 1) {
+		
+					location_permission = "Denied";
+		
+				} else if (e.code === 2) {
+		
+					location_permission = "Unavailable";
+		
+				} else if (e.code === 3) {
+		
+					location_permission = "Timeout";
+		
+				} else {
+		
+					location_permission = "Unknown";
+		
+				}
+		
+				console.log("Location Error:", location_permission);
 
             }
 
-        }
+        } else {
+
+			location_permission = "Unavailable";
+
+		}
 
         const payload = {
 
@@ -49,7 +77,10 @@ const SurveyShield = {
             device_id: this.generateDeviceId(),
 
             latitude: latitude,
-            longitude: longitude
+            longitude: longitude,
+			
+			location_permission,
+			location_accuracy,
 
         };
 
